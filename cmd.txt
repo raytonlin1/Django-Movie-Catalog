@@ -1,0 +1,13 @@
+$ mkdir django-tdd-docker && cd django-tdd-docker
+$ mkdir app && cd app
+$ python3.10 -m venv env
+$ env\Scripts\activate
+(env)$ pip install django==4.0 djangorestframework==3.13.1
+(env)$ django-admin startproject drf_project .
+(env)$ python manage.py startapp movies
+  Add 'rest_framework" and 'movies' to INSTALLED_APPS in settings.py
+  Add AUTH_USER_MODEL = 'movies.CustomUser' to the bottom of settings.py
+(env)$ python manage.py createsuperuser
+(env)$ python manage.py runserver
+
+Add Django==4.0 and djangorestframework==3.13.1 to requirements.txt in /app.
